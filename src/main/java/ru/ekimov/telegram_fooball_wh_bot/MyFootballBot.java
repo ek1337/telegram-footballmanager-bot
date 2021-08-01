@@ -3,6 +3,7 @@ package ru.ekimov.telegram_fooball_wh_bot;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.telegram.telegrambots.bots.TelegramWebhookBot;
 import org.telegram.telegrambots.meta.api.methods.BotApiMethod;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
@@ -16,9 +17,16 @@ import ru.ekimov.telegram_fooball_wh_bot.botapi.IncomingMessageHandler;
 
 
 public class MyFootballBot extends TelegramWebhookBot {
+
+    @Value ("${telegrambot.webHookPath}")
     private String webHookPath;
+
+    @Value ("${telegrambot.userName}")
     private String botUserName;
+
+    @Value ("${telegrambot.botToken}")
     private String botToken;
+
     private final IncomingMessageHandler incomingMessageHandler;
     private final CallBackDataHandler callBackDataHandler;
 
