@@ -10,7 +10,11 @@ It has basic CRUD operations with PostgreSQL.
 Bot commands:
 
 /reg - sign up to the game list;
+
 /unreg - self-remove from the game list;
+
 /check - show the current list of registered players;
+
 /clear - clear the list (admin)
+
 /kick - kick certain player (admin)
