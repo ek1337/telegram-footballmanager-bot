@@ -7,7 +7,7 @@ This is my first pet-project writtend on Java using Spring / Hibernate framework
 
 Bot commands:
 
-/reg - sign up to the game list;
+/reg - sign up to the game list; \n
 /unreg - self-remove from the game list;
 /check - show the current list of registered players;
 /clear - clear the list (admin)
