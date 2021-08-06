@@ -58,6 +58,9 @@ public class IncomingMessageHandler {
             replyMessage.setText("<i> Список на игру: \n" + beautifulList + "</i>");
 
         } else if ("/unreg".equals(text) || "/unreg@football_wh_bot".equals(text)) {
+            if (!participantService.userIsRegistered(participant)) {
+                replyMessage.setText("<i>" + userFirstName + " " + userLastName + " , Вы еще не записаны на игру! </i>");
+            }
             participantService.selfRemoveParticipant(participant);
             replyMessage.setText("<i>" + userFirstName + " " + userLastName + " отменил регистрацию на игру </i>");
 
