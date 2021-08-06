@@ -61,8 +61,10 @@ public class IncomingMessageHandler {
             if (!participantService.userIsRegistered(participant)) {
                 replyMessage.setText("<i>" + userFirstName + " " + userLastName + " , Вы еще не записаны на игру! </i>");
             }
-            participantService.selfRemoveParticipant(participant);
-            replyMessage.setText("<i>" + userFirstName + " " + userLastName + " отменил регистрацию на игру </i>");
+            else {
+                participantService.selfRemoveParticipant(participant);
+                replyMessage.setText("<i>" + userFirstName + " " + userLastName + " отменил регистрацию на игру </i>") /
+            }
 
         } else if ("/reg".equals(text) || "/reg@football_wh_bot".equals(text)) {
             if (participantService.userIsRegistered(participant)) {
