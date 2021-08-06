@@ -63,7 +63,7 @@ public class IncomingMessageHandler {
             }
             else {
                 participantService.selfRemoveParticipant(participant);
-                replyMessage.setText("<i>" + userFirstName + " " + userLastName + " отменил регистрацию на игру </i>") /
+                replyMessage.setText("<i>" + userFirstName + " " + userLastName + " отменил регистрацию на игру </i>");
             }
 
         } else if ("/reg".equals(text) || "/reg@football_wh_bot".equals(text)) {
